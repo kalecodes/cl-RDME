@@ -18,6 +18,7 @@ Generates a professional README.md file via the CLI.
 * [Tests](#tests) 
 * [Credits](#credits)
 * [Questions](#questions)
+* [Screenshots](#screenshots)
 
 
 
@@ -57,3 +58,8 @@ Ensure node is installed on your local device by entering the command ndoe -v in
 Please feel free to contact me via email with any questions.
 * GitHub: [kalecodes](https://github.com/kalecodes)
 * Email: kalen.wiley@gmail.com
+
+
+## Screenshots
+![](./assets/images/cl-screenshot.png)
+![](./assets/images/md-screenshot.png)
