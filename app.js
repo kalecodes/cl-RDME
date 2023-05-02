@@ -1,4 +1,25 @@
 const inquirer = require('inquirer');
+const generateMarkdown = require('./src/md-template.js');
+
+const mockData = {
+    title: 'Bar Buddy',
+    description: 'Find and learn new cocktail recipes',
+    confirmInstructions: true,
+    installation: 'These are example installation instructions',
+    confirmUsage: true,
+    usage: 'These are example usage instructions',
+    creditConfirm: true,
+    credits: [
+      { name: 'kalecodes', linkConfirm: false, link: '', confirmAddCredit: true },
+      { name: 'kalen', linkConfirm: false, link: '', confirmAddCredit: true },
+      {
+        name: 'kwiley',
+        linkConfirm: true,
+        link: 'https://github.com/kalecodes',
+        confirmAddCredit: false
+      }
+    ]
+};
 
 const promptUser = () => {
     return inquirer.prompt([
@@ -99,22 +120,11 @@ Add a New Credit
             }
         },
         {
-            type: 'confirm',
-            name: 'linkConfirm',
-            message: 'Would you like to include a link with this credit?',
-            default: true
-        },
-        {
             type: 'input',
             name: 'link',
-            message: 'Please provide a link to the credit.',
-            when: ({ linkConfirm }) => {
-                if (linkConfirm) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
+            message: 'Please provide a link for the credit, or press enter to skip.',
+            default: ''
+    
         },
         {
             type: 'confirm',
@@ -139,6 +149,9 @@ promptUser()
             return promptCredit(projectData);
         }
     })
-    .then(projectData => {
-        console.log(projectData, "inside third promise");
+    .then(fullProjectData => {
+        return generateMarkdown(fullProjectData);
+    })
+    .then(fileMardown => {
+        console.log(fileMardown);
     });
