@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const generateMarkdown = require('./src/md-template.js');
+const writeFile = require('./utils/generate-md.js');
 
 const mockData = {
     title: 'Bar Buddy',
@@ -153,5 +154,11 @@ promptUser()
         return generateMarkdown(fullProjectData);
     })
     .then(fileMardown => {
-        console.log(fileMardown);
+        return writeFile(fileMardown);
+    })
+    .then(writeFileResponse => {
+        console.log(writeFileResponse);
+    })
+    .catch(err => {
+        console.log(err);
     });
