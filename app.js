@@ -78,7 +78,7 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'contact',
+            name: 'questions',
             message: 'Please provide contact instructions for user questions:'
         },
         {
@@ -127,7 +127,7 @@ const promptUser = () => {
             type: 'list',
             name: 'license', 
             message: 'Please select a license:',
-            choices: ['GNU-General-Public', 'Apache', 'MIT', 'None'],
+            choices: ['GPLv3', 'Apache_2.0', 'MIT', 'None'],
             when: ({ licenseConfirm }) => {
                 if (licenseConfirm) {
                     return true;
@@ -138,16 +138,16 @@ const promptUser = () => {
         },
         {
             type: 'confirm',
-            name: 'confirmContribution',
+            name: 'confirmContributing',
             message: 'Would you like to include contribution instructions/guidelines?',
             default: true
         },
         {
             type: 'message',
-            name: 'contributions',
+            name: 'contributing',
             message: 'Please describe any contribution guidelines',
-            when: ({ confirmContribution }) => {
-                if (confirmContribution) {
+            when: ({ confirmContributing }) => {
+                if (confirmContributing) {
                     return true;
                 } else {
                     return false;
