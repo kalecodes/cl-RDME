@@ -40,7 +40,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'description',
-            message: 'Please provide a short description of your project. (Required)',
+            message: 'Please provide a short description of your project: (Required)',
             validate: descriptionInput => {
                 if (descriptionInput) {
                     return true;
@@ -49,6 +49,37 @@ const promptUser = () => {
                     return false;
                 }
             }
+        },
+        {
+            type: 'input',
+            name: 'username',
+            message: 'Please provide your GitHub username: (Required)',
+            validate: usernameInput => {
+                if (usernameInput) {
+                    return true;
+                } else {
+                    console.log("You must enter a username!");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Please provide your email address: (Required)',
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    console.log('You must enter an email address!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'contact',
+            message: 'Please provide contact instructions for user questions:'
         },
         {
             type: 'confirm',
@@ -85,6 +116,61 @@ const promptUser = () => {
                     return false;
                 }
             }   
+        },
+        {
+            type: 'confirm',
+            name: 'licenseConfirm',
+            message: 'Would you like to include a license badge & notice for your projects?',
+            default: true
+        },
+        {
+            type: 'list',
+            name: 'license', 
+            message: 'Please select a license:',
+            choices: ['GNU-General-Public', 'Apache', 'MIT', 'None'],
+            when: ({ licenseConfirm }) => {
+                if (licenseConfirm) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } 
+        },
+        {
+            type: 'confirm',
+            name: 'confirmContribution',
+            message: 'Would you like to include contribution instructions/guidelines?',
+            default: true
+        },
+        {
+            type: 'message',
+            name: 'contributions',
+            message: 'Please describe any contribution guidelines',
+            when: ({ confirmContribution }) => {
+                if (confirmContribution) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'confirm',
+            name: 'confirmTests',
+            message: 'Would you like to include test instructions/guidelines',
+            default: true
+        },
+        {
+            type: 'message',
+            name: 'tests',
+            message: 'Pleae describe any test instructions',
+            when: ({ confirmTests }) => {
+                if (confirmTests) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
         },
         {
             type: 'confirm',
