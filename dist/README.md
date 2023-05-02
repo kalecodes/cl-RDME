@@ -1,60 +1,60 @@
 
-    # Bar Buddy
+# Bar Buddy
 
-    [![license](https://img.shields.io/badge/license-None-blue)](https://shields.io)
+[![license](https://img.shields.io/badge/license-None-blue)](https://shields.io)
 
-    ## Description
+## Description
 
-    Find and learn new cocktail recipes. 
+Find and learn new cocktail recipes. Perfect for studying bartenders or at-home cocktail lovers!
 
-    ## Table of Contents
-    
-    ## Table of Contents
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contribution Guidelines](#contribution guidelines)
-    * [Tests](#tests)
-    * [Credits](#credits)
-    * [Questions](#questions)
-    
-    
-    
-    ## Installation Instructions
 
-    No special installation steps are required. You can acces this application via the deployment link: https://github.com/kalecodes/bar-buddy
-     
-    
-    ## Usage Instructions
 
-    Use the Random Cocktail button to be presented with a random recipe from the database. Search by ingredient or drink name using the search fields to be presented with a list of related drinks. Click any drink image to view the measurements, ingredients, instructions, and related videos. Save your favorite drinks to view later using the 'Save Drink' button.
-     
-    
-    ## License
-    
-    This project does not utilize any licenses.
-    
-    
-    ## Contribution Guidelines
+## Table of Contents
 
-    This project is not accepting third-party contributions at this time. 
-    
-    
-    ## Tests
+* [Installation](#installation) 
+* [Usage](#usage) 
+* [License](#license) 
+* [Contributions](#contributions) 
+* [Tests](#tests) 
+* [Credits](#credits)
+* [Questions](#questions)
 
-    No testing is required for this application
-    
-    
-    ## Credits
-    
-    * Bulma CSS Framework (https://bulma.io/),
-    * TheCocktailDB API (https://www.thecocktaildb.com/api.php),
-    * YouTube Data API (https://developers.google.com/youtube/v3/)
-    
-    
-    ## Questions
 
-    Please feel free to contact me via email with any questions.
-    * GitHub: [kalecodes](https://github.com/kalecodes)
-    * Email: kalen.wiley@gmail.com
-    
+
+## Installation Instructions
+
+This application does not require any installation. Simply visit the deployed application via this link: https://kalecodes.github.io/bar-buddy/
+ 
+
+## Usage Instructions
+
+Click the 'Random Cocktail' button to be presented with a random cocktail from the database.  Use the search input fields to search by ingredient or cocktail name, to be presented with a list of related cocktails. Click any cocktail image to view measurements, ingredients, insttructions, and related videos for the drink. Save you favorites to view later using the 'Save Drink' button.  
+ 
+
+## License
+
+This project does not utilize any licenses.
+
+
+## Contribution Guidelines
+
+This application is not accepting third-party applications at this time. 
+
+
+## Tests
+
+No testing is required for this application.
+
+
+## Credits
+
+* Bulma CSS Framework (https://bulma.io/),
+* TheCocktailDB API (https://www.thecocktaildb.com/api.php),
+* YouTube Data API (https://developers.google.com/youtube/v3/)
+
+
+## Questions
+
+Please feel free to contact me via email with any questions.
+* GitHub: [kalecodes](https://github.com/kalecodes)
+* Email: kalen.wiley@gmail.com

@@ -234,6 +234,8 @@ promptUser()
     .then(projectData => {
         if (projectData.creditConfirm) {
             return promptCredit(projectData);
+        } else {
+            return projectData;
         }
     })
     .then(fullProjectData => {
